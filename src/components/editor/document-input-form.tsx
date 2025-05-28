@@ -7,8 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Input } from '@/components/ui/input'; // Added Input for file upload
-import { ScanSearch, FileText, FileUp } from 'lucide-react'; // Replaced ListChecks with FileUp
+import { ScanSearch, FileText } from 'lucide-react';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 
 interface DocumentInputFormProps {
@@ -18,7 +17,6 @@ interface DocumentInputFormProps {
 
 export function DocumentInputForm({ onAnalyze, isLoading }: DocumentInputFormProps) {
   const [documentText, setDocumentText] = useState<string>('');
-  const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,29 +25,8 @@ export function DocumentInputForm({ onAnalyze, isLoading }: DocumentInputFormPro
       alert("Please enter some document text to analyze.");
       return;
     }
-
-    let valeRulesContent = "";
-    if (selectedFiles && selectedFiles.length > 0) {
-      const filePromises = Array.from(selectedFiles).map(file => {
-        if (file.type === 'text/yaml' || file.name.endsWith('.yml') || file.name.endsWith('.yaml')) {
-          return file.text();
-        }
-        // Handle incorrect file type, though 'accept' attribute should help
-        alert(`File "${file.name}" is not a YAML file and will be ignored.`);
-        return Promise.resolve(""); // Ignore non-YAML files
-      });
-      try {
-        const fileContents = await Promise.all(filePromises);
-        // Filter out any empty strings from ignored files
-        valeRulesContent = fileContents.filter(content => content.trim() !== "").join("\n\n---\n\n"); 
-      } catch (error) {
-        console.error("Error reading Vale rule files:", error);
-        alert("Error reading one or more Vale rule files. Please ensure they are valid text files and try again.");
-        return;
-      }
-    }
-    
-    onAnalyze(documentText, valeRulesContent);
+    // Pass an empty string for valeRules, backend will use default.
+    onAnalyze(documentText, "");
   };
 
   return (
@@ -60,7 +37,7 @@ export function DocumentInputForm({ onAnalyze, isLoading }: DocumentInputFormPro
           Document Input
         </CardTitle>
         <CardDescription>
-          Paste your document content and upload your Vale rule files for analysis.
+          Paste your document content for analysis. The system uses a pre-configured set of Vale rules.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -76,26 +53,6 @@ export function DocumentInputForm({ onAnalyze, isLoading }: DocumentInputFormPro
               className="min-h-[200px] text-sm leading-relaxed shadow-inner focus:ring-primary"
               aria-label="Document Content Input"
             />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="valeRuleFiles" className="text-base font-medium flex items-center gap-1">
-              <FileUp className="h-5 w-5 text-primary" />
-              Upload Vale Rules (.yml/.yaml)
-            </Label>
-            <Input
-              id="valeRuleFiles"
-              type="file"
-              accept=".yml,.yaml,text/yaml"
-              multiple
-              onChange={(e) => setSelectedFiles(e.target.files)}
-              className="shadow-inner focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 cursor-pointer"
-              aria-label="Vale Rule Files Upload"
-            />
-             {selectedFiles && selectedFiles.length > 0 && (
-              <p className="text-xs text-muted-foreground pt-1">
-                {selectedFiles.length} file(s) selected: {Array.from(selectedFiles).map(f => f.name).join(', ')}
-              </p>
-            )}
           </div>
           <Button type="submit" disabled={isLoading || !documentText.trim()} className="w-full text-base py-3 shadow-md hover:shadow-lg transition-shadow">
             {isLoading ? (
