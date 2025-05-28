@@ -1,0 +1,2182 @@
+
+extends: existence
+message: "Don't use language (such as '%s') that defines people by their disability."
+link: https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/term-collections/accessibility-terms
+level: suggestion
+ignorecase: true
+tokens:
+  - a victim of
+  - able-bodied
+  - an epileptic
+  - birth defect
+  - crippled
+  - differently abled
+  - disabled
+  - dumb
+  - handicapped
+  - handicaps
+  - healthy person
+  - hearing-impaired
+  - lame
+  - maimed
+  - mentally handicapped
+  - missing a limb
+  - mute
+  - non-verbal
+  - normal person
+  - sight-impaired
+  - slow learner
+  - stricken with
+  - suffers from
+  - vision-impaired
+product-or-feature-names: false
+audience-is-familiar: false
+
+# Acronyms.yml
+spell-out-the-term: true
+
+just-once: false
+
+# HeadingAcronyms.yml
+titles-and-headings: true
+
+lowercase-the-spelled-out-term: false
+a-or-an: false
+possessive-form: false
+extends: conditional
+message: "'%s' has no definition."
+link: https://docs.microsoft.com/en-us/style-guide/acronyms
+level: suggestion
+ignorecase: false
+# Ensures that the existence of 'first' implies the existence of 'second'.
+first: '\b([A-Z]{3,5})\b'
+second: '(?:\b[A-Z][a-z]+ )+\(([A-Z]{3,5})\)'
+# ... with the exception of these:
+exceptions:
+  - API
+  - ASP
+  - CLI
+  - CPU
+  - CSS
+  - CSV
+  - DEBUG
+  - DOM
+  - DPI
+  - FAQ
+  - GCC
+  - GDB
+  - GET
+  - GPU
+  - GTK
+  - GUI
+  - HTML
+  - HTTP
+  - HTTPS
+  - IDE
+  - JAR
+  - JSON
+  - JSX
+  - LESS
+  - LLDB
+  - NET
+  - NOTE
+  - NVDA
+  - OSS
+  - PATH
+  - PDF
+  - PHP
+  - POST
+  - RAM
+  - REPL
+  - RSA
+  - SCM
+  - SCSS
+  - SDK
+  - SQL
+  - SSH
+  - SSL
+  - SVG
+  - TBD
+  - TCP
+  - TODO
+  - URI
+  - URL
+  - USB
+  - UTF
+  - XML
+  - XSS
+  - YAML
+  - ZIP
+extends: existence
+message: "Remove '%s' if it's not important to the meaning of the statement."
+link: https://docs.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences
+ignorecase: true
+level: warning
+action:
+  name: remove
+tokens:
+  - abnormally
+  - absentmindedly
+  - accidentally
+  - adventurously
+  - anxiously
+  - arrogantly
+  - awkwardly
+  - bashfully
+  - beautifully
+  - bitterly
+  - bleakly
+  - blindly
+  - blissfully
+  - boastfully
+  - boldly
+  - bravely
+  - briefly
+  - brightly
+  - briskly
+  - broadly
+  - busily
+  - calmly
+  - carefully
+  - carelessly
+  - cautiously
+  - cheerfully
+  - cleverly
+  - closely
+  - coaxingly
+  - colorfully
+  - continually
+  - coolly
+  - courageously
+  - crossly
+  - cruelly
+  - curiously
+  - daintily
+  - dearly
+  - deceivingly
+  - deeply
+  - defiantly
+  - deliberately
+  - delightfully
+  - diligently
+  - dimly
+  - doubtfully
+  - dreamily
+  - easily
+  - effectively
+  - elegantly
+  - energetically
+  - enormously
+  - enthusiastically
+  - excitedly
+  - extremely
+  - fairly
+  - faithfully
+  - famously
+  - ferociously
+  - fervently
+  - fiercely
+  - fondly
+  - foolishly
+  - fortunately
+  - frankly
+  - frantically
+  - freely
+  - frenetically
+  - frightfully
+  - furiously
+  - generally
+  - generously
+  - gently
+  - gladly
+  - gleefully
+  - gracefully
+  - gratefully
+  - greatly
+  - greedily
+  - happily
+  - hastily
+  - healthily
+  - heavily
+  - helplessly
+  - honestly
+  - hopelessly
+  - hungrily
+  - innocently
+  - inquisitively
+  - intensely
+  - intently
+  - interestingly
+  - inwardly
+  - irritably
+  - jaggedly
+  - jealously
+  - jovially
+  - joyfully
+  - joyously
+  - jubilantly
+  - judgmentally
+  - justly
+  - keenly
+  - kiddingly
+  - kindheartedly
+  - knavishly
+  - knowingly
+  - knowledgeably
+  - lazily
+  - lightly
+  - limply
+  - lively
+  - loftily
+  - longingly
+  - loosely
+  - loudly
+  - lovingly
+  - loyally
+  - madly
+  - majestically
+  - meaningfully
+  - mechanically
+  - merrily
+  - miserably
+  - mockingly
+  - mortally
+  - mysteriously
+  - naturally
+  - nearly
+  - neatly
+  - nervously
+  - nicely
+  - noisily
+  - obediently
+  - obnoxiously
+  - oddly
+  - offensively
+  - optimistically
+  - overconfidently
+  - painfully
+  - partially
+  - patiently
+  - perfectly
+  - playfully
+  - politely
+  - poorly
+  - positively
+  - potentially
+  - powerfully
+  - promptly
+  - properly
+  - punctually
+  - quaintly
+  - queasily
+  - queerly
+  - questionably
+  - quickly
+  - quietly
+  - quirkily
+  - quite
+  - quizzically
+  - randomly
+  - rapidly
+  - rarely
+  - readily
+  - really
+  - reassuringly
+  - recklessly
+  - regularly
+  - reluctantly
+  - repeatedly
+  - reproachfully
+  - restfully
+  - righteously
+  - rightfully
+  - rigidly
+  - roughly
+  - rudely
+  - safely
+  - scarcely
+  - scarily
+  - searchingly
+  - sedately
+  - seemingly
+  - selfishly
+  - separately
+  - seriously
+  - shakily
+  - sharply
+  - sheepishly
+  - shrilly
+  - shyly
+  - silently
+  - sleepily
+  - slowly
+  - smoothly
+  - softly
+  - solemnly
+  - solidly
+  - speedily
+  - stealthily
+  - sternly
+  - strictly
+  - suddenly
+  - supposedly
+  - surprisingly
+  - suspiciously
+  - sweetly
+  - swiftly
+  - sympathetically
+  - tenderly
+  - tensely
+  - terribly
+  - thankfully
+  - thoroughly
+  - thoughtfully
+  - tightly
+  - tremendously
+  - triumphantly
+  - truthfully
+  - ultimately
+  - unabashedly
+  - unaccountably
+  - unbearably
+  - unethically
+  - unexpectedly
+  - unfortunately
+  - unimpressively
+  - unnaturally
+  - unnecessarily
+  - urgently
+  - usefully
+  - uselessly
+  - utterly
+  - vacantly
+  - vaguely
+  - vainly
+  - valiantly
+  - vastly
+  - verbally
+  - very
+  - viciously
+  - victoriously
+  - violently
+  - vivaciously
+  - voluntarily
+  - warmly
+  - weakly
+  - wearily
+  - wetly
+  - wholly
+  - wildly
+  - willfully
+  - wisely
+  - woefully
+  - wonderfully
+  - worriedly
+  - yawningly
+  - yearningly
+  - yieldingly
+  - youthfully
+  - zealously
+  - zestfully
+  - zestily
+extends: existence
+message: Use 'AM' or 'PM' (preceded by a space).
+link: https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/term-collections/date-time-terms
+level: error
+nonword: true
+tokens:
+  - '\d{1,2}[AP]M'
+  - '\d{1,2} ?[ap]m'
+  - '\d{1,2} ?[aApP]\.[mM]\.'
+extends: existence
+message: "In general, don't hyphenate '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/auto
+ignorecase: true
+level: error
+action:
+  name: convert
+  params:
+    - simple
+tokens:
+  - 'auto-\w+'
+extends: existence
+message: "Don't use '%s'. See the A-Z word list for details."
+# See the A-Z word list
+link: https://docs.microsoft.com/en-us/style-guide
+ignorecase: true
+level: error
+tokens:
+  - abortion
+  - and so on
+  - app(?:lication)?s? (?:developer|program)
+  - app(?:lication)? file
+  - backbone
+  - backend
+  - contiguous selection
+# A
+abort-abortion: false #Avoid.yml
+above: true #Vocab.yml
+access: true #Vocab.yml
+access-key: false
+accessible: true #Vocab.yml
+achievement: false
+actionable: true #Vocab.yml
+active-player-active-user: false
+adapter: true #Terms.yml
+add: false
+add-in-add-on: false
+adjacent-selection: false
+administer: true #Terms.yml
+administrator-admin: true #Terms.yml
+afterward: true #Terms.yml
+against: true #Vocab.yml
+artificial-intelligence-ai: false #Terms.yml
+alarm: true #Vocab.yml
+alert: true #Vocab.yml
+alias: true #Vocab.yml
+allow-allows: true #Vocab.yml
+alphabetical: true #Terms.yml
+alphanumeric: true #Terms.yml
+am-pm: true #AMPM.yml
+ampersand: false
+and-so-on: true #Avoid.yml
+and-or: true #Avoid.yml
+antialiasing: true #Terms.yml
+antimalware: true #Terms.yml
+antispyware: true #Terms.yml
+antivirus: true #Terms.yml
+app-application: true #Avoid.yml
+appendix-appendices: true #Terms.yml
+applet: false
+application-developer-app-developer: true #Avoid.yml
+application-file-app-file: true #Avoid.yml
+application-icon-app-icon: false
+application-window-app-window: false
+argument-vs-parameter: false
+arrow: false
+arrow-keys: false
+as-well-as: true #Avoid.yml
+ask: false
+assembly-language: true #Terms.yml
+assistive: false
+assure-ensure-insure: true #Vocab.yml
+asterisk: false
+at-sign: false
+attribute: false
+audiobook: true #Terms.yml
+author: true #Vocab.yml
+auto: true #Auto.yml
+avg: true #Vocab.yml
+
+# B
+back-end: true #Backend.yml, #Avoid.yml
+back-up-backup: false
+backbone: true #Avoid.yml
+backlight: true #Terms.yml
+backspace: false
+backtab: false
+badge: false
+baseline: false
+baud: false
+beep: false
+below: false
+beta: true #Vocab.yml
+bi: false
+big-data: false
+big-endian-little-endian: false
+billion-b: false
+bio: false
+bitmap: false
+bits-per-second: false
+black-box: false
+black-hat-hacker: false
+blacklist: false
+blade: false
+blank: false
+blog-blogger-blogroll-weblog: false
+blue-screen-bluescreen: false
+bluetooth: false
+blu-ray-disk: false
+board: false
+bold: false
+bookmark: false
+boolean: false
+boot: false
+bot: true #Terms.yml
+bottom-left-bottom-right: false
+bounding-outline: false
+box: false
+bps: true #Terms.yml
+breakpoint: false
+broadcast: false #Passive.yml
+browse: false
+bug-fix: false
+build: false
+bulk: false
+button: false
+by: false
+
+# C
+c-cplusplus-csharp: false
+cable: false
+cabling: false
+cache-vs-disk-cache: false
+calendar: false
+call-back-callback: false
+call-out-callout: false
+can-may: false
+cancel-canceled-canceling-cancellation: false
+carry-out-vs-run: false
+cascading-style-sheet-css: true #Acronyms.yml
+catalog: false
+category-axis: true
+cell-phone-cellular-phone: false
+cellular: false
+center-on: false
+character-set: false
+chart: false
+chat: false
+chatbot: true #Terms.yml
+check-check-box-check-mark: false
+check-in: false
+child-folder: false
+choose: false
+clear: false
+click: false
+clickstream: false
+clickthrough: false
+client: false
+client-side: false
+client-server: false
+clipboard: false
+close: false
+close-button: false
+cloud: true #Terms.yml
+cloud-platform: false
+cloud-services: false
+co: false
+code-page: false
+code-point: false
+codec: false
+color-map: false
+column-format: false
+combo-box: false
+command: false
+command-button: false
+command-line: false
+command-prompt: false
+community-cloud: false
+company-vs-organization: false
+compile: false
+compute: false
+computer: false
+connect: false
+console: false
+context-menu: false
+context-sensitive: false
+contiguous-selection: true # Avoid.yml
+control: false
+control-panel: false
+controller: false
+control-menu-box: false
+conversation-as-a-platform-caap: true #Terms.yml
+conversational-user-interface-cui: false
+dash-core: false
+corrupted: true
+country-or-region: false
+crash: false
+cut-and-paste: false
+cyber: false
+
+# D
+data-datum: false
+data-binding: false
+data-record: false
+database: false
+datacenter: false
+datagram: false
+deaf-or-hard-of-hearing: false
+debug: false
+deceptive-software: false
+decrement: false
+default: false
+defragment: false
+deinstall: false
+delete: false
+demilitarized-zone-dmz: false
+deprecated: false
+depress-depressed: false
+deselect: false
+desktop: false
+destination: false
+destination-drive-destination-file: false
+device: false
+device-driver-driver: false
+devops: false
+dialog-box-dialog-dialogue: false
+dial-up: false
+different: false
+dimmed: false
+direction-keys: false
+directory: false
+disable-disabled: true #Accessibility.yml
+disc: true
+disjoint-selection: true
+disk: false
+disk-resource: false
+disk-space: false
+display: false
+display-adapter-display-driver: false
+dns: false
+document: false
+domain: false
+dot-com: false
+dotted-rectangle: false
+double-buffering: false
+double-click-double-clicking: false
+downgrade: false
+download: false
+drag-and-drop: true #Wordiness.yml
+drill-down-drill-up-drill-through: false
+drive: false #Terms.yml
+drive-name: false
+drop-down: false
+dvd: false
+dynamic-link-library-dll: false
+dynamic-service-capacity: false
+
+# E
+eg: true #Foreign.yml
+earlier: false
+e-book: false
+e-commerce: false
+e-discovery: false
+edutainment: false
+e-form-form: false
+either-or: false
+elastic-service-capacity: false
+e-learning: false
+ellipsis-button: false
+email: false
+embed: false
+emoticons-emoji: false
+enable-enables: false
+end: false
+endline: false
+endpoint: false
+end-user-license-agreement-eula: false
+ensure-insure-assure: true #Vocab.yml
+enter: false
+enterprise: false
+entry-field: false
+environment-variable: false
+erase: false
+e-sports: false
+et-al: false
+etc: false
+euro: false
+e-words: false
+executable-exe: false
+execute: false
+exit: false
+expand-collapse: false
+expose: false
+extend: false
+extension-file-name-extension: false
+
+# F
+fail: false
+fail-over-fail-back-failover-failback: false
+FALSE: false
+family: false
+far-east: false
+far-left-far-right: false
+favorite: false
+fax: false
+field: false
+file: false
+file-attributes: false
+file-explorer: false
+file-name: false
+file-name-extension-extension: false
+finalize: true #ComplexWords.yml
+find-replace: false
+first-line: false
+fitness-band: false
+fixed-disk: false
+flick: false
+flush-flush-to: false
+flyout: false
+folder-folder-icon: false
+following: false
+font-font-style: false
+foo-foobar-fubar: false
+footer: false
+foreground-program: false
+format-formatted-formatting: false
+fourth-generation-language: false
+frameset: false
+freeze-frozen: false
+friendly-name: false
+from-vs-on: false
+front-end: false
+full-screen: false
+function: false
+
+# G
+gallery: false
+game-pad: false
+garbage-collection-garbage-collector: false
+general-data-protection-regulation-gdpr: false
+general-protection-fault-gp-fault: false
+gigabit: false
+gigabyte: false #Terms.yml
+gigahertz: false
+given: false
+global: false
+glyph: false
+go-to: false
+graphic-graphics-graphical: false
+graphics-adapter: false
+gray-grayed-out: false
+greater-better: false
+greylist: false
+gridline: false
+group-box: false
+group-newsgroup: false
+grow: false
+
+# H
+hack-hacker: false
+half-inch: false
+handheld-handheld-device: false
+handle: false
+handshake: false
+hang: false
+hard-copy: false
+hard-drive: false
+hard-code-hard-coded-hard-coding: false
+hard-of-hearing: false
+hardwired: false
+hdmi: false
+header: false
+heading: false
+hearing-impaired: false
+help: false
+he-she: true #Gender.yml, #Vocab.yml
+hexadecimal: false
+hierarchical-menu: false
+higher: false
+high-level-language-compiler: false
+high-quality: false
+high-resolution: false
+hint: false
+hit: false
+home-directory: false
+home-home-page: false
+honeypot: false
+host-name: false
+hosted-service: false
+hosting-provider: false
+hot-key: false
+hot-link: false
+hot-spot-hotspot: false
+hover-over-hovering: false
+how-how-to: false
+html: true #Acronyms.yml
+http-https: false #Acronyms.yml
+hybrid-cloud:  false
+hyperlink: false
+
+# I
+icon: false
+iconize: false
+ie: true #Foreign.yml
+if-vs-whether-vs-when: false
+illegal: false
+image-map: false
+imbed: false
+impact: false
+inactive-inactive-state: false
+inbound: false
+incoming-outgoing: false
+increment: false
+indent-outdent: false
+index-indexes-indices: false
+info: false
+infrastructure-as-a-service: false
+initialize: false
+initiate: true #ComplexWords.yml
+inline: false
+input: false
+input-output: false
+insecure: false
+inside: false
+install: false
+instant-message-im: false
+instantiate: false
+insure-assure-ensure: true #Vocab.yml
+intelligence-intelligent-technology: false
+interface: false
+internet-intranet-extranet: false
+internet-connection-sharing: false
+internet-explorer: false
+internet-of-things-iot: false
+internet-service-provider: false
+invalid-not-valid: false
+invoke: false
+ip-address: false
+issue: false
+it-pro-it-professional: false
+italic: false
+its-vs-its: false
+
+# J
+java-jscript-javascript: false
+join: false
+joystick: false
+jump: false
+justify-justified: false
+
+# K
+kerberos-protocol: false
+key-combination: false
+key-sequence: false
+keyboard-shortcut: false
+keypad: false
+keypress-keystroke: true #Terms.yml
+kilobit: false
+kilobits-per-second: false
+kilobyte: false #Terms.yml
+kilobytes-per-second: false
+kilohertz: false
+knowledge-base: false
+
+# L
+labeled-labeling: false
+laptop: false
+later: false
+launch: false
+lay-out-laid-out-layout: false
+leading: false
+leave: false
+left-leftmost-left-hand: false
+left-align-left-aligned: false
+left-justify-left-justified: false
+left-mouse-button: false
+legacy: false
+legal: false
+less-vs-fewer-vs-under: false
+let-lets: false
+leverage: false
+license-terms: false
+like: false
+line: false
+line-of-business: false
+link: false
+list-box: false
+load: false
+lock: false
+lock-up: false
+log-on-log-off: false
+lower: false
+lower-left-lower-right: false
+lowercase: false
+low-resolution: false
+
+# M
+machine: false
+machine-learning: false
+main-document: false
+makefile: false
+malicious-code: false
+malicious-user: false
+malware-malicious-software: false
+management-information-systems: false
+manipulate: false
+marquee: false
+master-slave: false
+mathematical: false
+matrix-matrices: false
+maximize-button-maximize: false
+medium-media: false
+megabit: false
+megabits-per-second: false
+megabyte: false #Terms.yml
+megahertz: false
+member-function: false
+memory: false
+memory-resident: false
+menu-item: false
+message: false
+metafile: false
+micro: false
+microprocessor: false
+microsoft: false
+microsoft-account: false
+microsoft-ai: false
+software-license-terms: false
+microsoft-store: false
+midnight: false
+million-m: false
+minimize-button-minimize: false
+minus-sign: false
+mip-mapping: false
+mission-critical: false
+mixed-reality: false
+mobile-device-mobile-phone: false #Terms.yml
+monitor: false
+monospace: false
+more-than-vs-over: false
+mouse: false
+mouse-over: false
+movable: false
+move: false
+mpeg: false
+multi: false
+multifactor-authentication: false
+multiple-selection: false
+multiplication-sign: false
+multitask-multitasking: false
+multithreaded: false
+
+# N
+n: false
+namespace: false
+nanosecond: false
+native-language: false
+natural-user-interface-nui: false
+navigate: false
+need: false
+net: false
+network: false
+network-adapter: false
+network-administrator: false
+network-connection: false
+network-drive: false
+newsreader: false
+non: false
+nonadjacent-selection: false
+noncontiguous-selection: false
+nonprintable-nonprinting: false
+normal-normally: false
+notification: false
+notification-area: false
+null: false
+null-terminated-null-terminating: false
+number-sign: false
+numeric: false
+
+# O
+object: false
+obsolete: false
+of: false
+offline: false
+off-premises-on-premises: false
+ok-okay: false
+on: false
+on-the-fly: false
+onboarding: false
+once: false
+online: false
+online-services: false
+on-screen: false
+on-screen-keyboard: false
+onto: false
+opcode: false
+open: false
+open-source: false
+operating-environment-operating-system: false
+opt-in-opt-out: false
+option-button: false
+org-organization: false
+output: false
+outside: false
+over: false
+overwrite: false
+
+# P
+page: false
+palette: false
+pan: false
+pane: false
+parameter: false
+parent-child: false
+parenthesis-parentheses: false
+passwordless: false
+path: false
+pc: false
+p-code: false
+pen: false
+per: false
+percent-percentage: false #Percentages.yml
+perimeter-network: false
+peripheral: false
+permissions: false
+personal-digital-assistant: true #Terms.yml
+phone: false #Terms.yml
+photo: false
+pin-unpin: false
+pinch: false
+ping-ping: false
+pipe: false
+placeholder: false
+plaintext-plain-text: false
+platform: false
+platform-as-a-service: false
+playlist: false
+please: false
+plug-and-play: false
+plug-in: false
+plus-sign: false
+point-to: false
+pointer: false
+pop-up: false
+port: false
+postal-code: false
+pound-key-pound-sign: false
+power-cord: false
+power-down-power-up-power-off-power-on: false
+power-user: false
+pre: false
+preceding: false
+press-and-hold: false
+preview: false
+print-printout: false
+print-queue-printer-queue: false
+private-cloud-hosted-private-cloud: false
+privileges: false
+profile: false
+program: false
+program-file: false
+prompt: false
+prop: false
+property: false
+property-sheet-property-page: false
+protected-mode: false
+public-cloud: false
+pull-down: false
+purge: false
+push-button: false
+
+# Q
+quality-high-quality: false
+quit: false
+
+# R
+radio-button: false
+ragged-right: false
+ram: false #Acronyms.yml
+range-selection: false
+re: false
+read-only: false
+read-write-read-write-permission: false
+real-time: false
+reboot: false
+recommended: false
+recycle-bin: false
+refresh: false
+registry-registry-settings: false
+reinitialize: false
+relationship-chatbot: false
+rem-statement: false
+remote: false
+remove: false
+replace: false
+restart: false
+restore: false
+reverse-video: false
+right-rightmost-right-hand: false
+right-align-right-aligned: false
+right-justify-right-justified: false
+right-mouse-button: false
+right-click: false
+rights: false
+rom: false
+roman: false
+root-directory: false
+rotate: false
+run-vs-execute: false
+running-foot-running-head: false
+runs-vs-runs-on: false
+runtime: false
+
+# S
+s-es: false
+sample-vs-preview: false #Vocab.yml
+save: false
+scan-line: false
+screen: false
+screen-resolution: false
+screened-subnet: false
+screenshot: false
+script-scriptlet: false
+scroll: false
+scroll-bar-scroll-arrow-scroll-box: false
+search-and-replace: false
+search-box: false
+secondary-menu: false
+select: false
+server: false
+service-level-agreement-sla: false
+service-oriented-architecture-soa: false
+set-specify: false
+set-up-setup: false
+setting-value: false
+set-top-box: false
+shaded: false
+shell: false
+ship: false
+shortcut-shortcut-menu: false
+should-vs-must: false
+shut-down-shutdown: false
+sign-in-sign-out: false
+simply: false
+single-sign-on-sso: false
+site: false
+site-map: false
+size-resize: false
+sleep: false
+slider: false
+slideshow: false
+small-caps: false #AMPM.yml
+smart-card: false
+smartphone: true #Terms.yml
+snap-in: false
+social-chatbot: false
+soft-copy: false
+software-as-a-service-saas: false
+software-plus-services: false
+sorry: false
+spam: false
+specification: false
+spell-checker: false
+spin-box: false
+split-bar-split-box: false
+spoofing: false
+spreadsheet-vs-workbook: false
+spyware: false
+sql-sql-server: false #Acronyms.yml
+start-restart: false
+start-button-start-menu: false
+start-page: false
+start-up-startup: false
+status-bar: false
+stop-stop-responding: false
+storage-storage-device: false
+store-marketplace-gallery: false
+stream-streaming: false
+stretch: false
+strut-structure: false
+style-sheet: false
+sub: false
+subaddress: false
+subclass: false
+surf: false
+swipe: false
+switch: false
+symbol: false
+sync: false
+system-administrator: true #Terms.yml
+system-prompt: false
+system-software: false
+system-tray: false
+
+# T
+tab: false
+table-of-contents: false
+tablet: false
+tap-double-tap-tap-and-hold: false
+target-drive-target-file: false
+taskbar: false
+terabyte: false #Terms.yml
+terminate: false
+text-text-message: false
+text-box: false
+thanks-thank-you: false
+that-vs-which: false
+thousand-k: false
+tile-live-tile: false
+time-out: false
+time-stamp: false
+toast: false
+to-do: false
+toggle: false
+tone: false
+tool: false
+toolkit: false
+top-left-top-right: false
+top-level-folder: false
+touchpad: false
+touchscreen: false
+toward: false
+trackball: false
+trailing: false
+trojan-horse-trojan: false
+turn-on-turn-off: false
+turnkey: false
+type: false
+
+# U
+uk: false
+ultrabook: false
+un: false
+unavailable: false
+uncheck-unmark-unselect: false
+undelete: false
+underline-vs-underscore: false
+undo: false
+uninstall: false
+unregister: false
+unwanted-software: false
+upgrade: false
+upload: false
+upnp: false
+upper-left-upper-right: false
+uppercase: false
+upsize: false
+upward: false
+url: true #URLFormat.yml, GeneralURL.yml
+us: false
+usable: false
+usb: true #Acronyms.yml
+use-terms: false
+user-end-user: false
+user-rights: false
+using-by-using-with: false
+utility: false
+
+# V
+value-axis: false
+versus-vs: false
+video-call-videoconference: false
+video-card: false
+video-display: false
+video-driver: false
+video-game: false
+virtual: false
+virtual-agent: false
+virtualize: false
+visit: false
+voice-user-interface-vui: false
+voice-activated-device: false
+voicemail: false
+vulnerability: false
+
+# W
+w3c: false
+want: false #ComplexWords.yml
+we: true #We.yml
+wearable-wearable-device: false
+web-world-wide-web-www: false
+web-services: false
+where: false
+while: false
+white-hat-hacker: false
+white-paper: false
+white-space: false
+whitelist: false
+who-vs-that: false
+wi-fi: false
+wildcard-character: false
+window: false
+windows-windows-based: false
+windows-7-windows-8-windows-10: false
+windows-explorer: false
+wireframe: false
+wireless: false
+wizard: false
+word-processing: false
+wordwrap-wordwrapping: false
+work-area-workspace: false
+work-style: false
+workgroup: false
+working-memory: false
+workstation: false
+worldwide-vs-international: false
+write-only: false
+write-protect-write-protected: false
+
+# X
+x: false
+x-axis: false
+x-coordinate: false
+xon-xoff: false
+
+# Y
+y-axis: false
+y-coordinate: false
+
+# Z
+z: false
+z-axis: false
+zero-zeros: false
+zip-code: false
+zoom-in-zoom-out: false
+gender-neutral: true
+culturally-sensitive: false
+# SentenceLength.yml
+short-sentences: true
+# Headings.yml
+sentence-style-capitalization: true
+
+capitalize-the-first-word: false
+uppercase-for-emphasis: false
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/word-choice/use-contractions
+level: error
+ignorecase: true
+action:
+  name: replace
+swap:
+  are not: aren't
+  cannot: can't
+  could not: couldn't
+  did not: didn't
+  do not: don't
+  does not: doesn't
+  has not: hasn't
+  have not: haven't
+  how is: how's
+  is not: isn't
+
+  'it is(?!\.)': it's
+  'it''s(?=\.)': it is
+
+  should not: shouldn't
+
+  "that is(?![.,])": that's
+  'that''s(?=\.)': that is
+
+  'they are(?!\.)': they're
+  'they''re(?=\.)': they are
+
+  was not: wasn't
+
+  'we are(?!\.)': we're
+  'we''re(?=\.)': we are
+
+  'we have(?!\.)': we've
+  'we''ve(?=\.)': we have
+
+  were not: weren't
+
+  'what is(?!\.)': what's
+  'what''s(?=\.)': what is
+
+  'when is(?!\.)': when's
+  'when''s(?=\.)': when is
+
+  'where is(?!\.)': where's
+  'where''s(?=\.)': where is
+
+  will not: won't
+extends: existence
+message: "Remove the spaces around '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/dashes-hyphens/emes
+ignorecase: true
+nonword: true
+level: error
+action:
+  name: edit
+  params:
+    - trim
+    - " "
+tokens:
+  - '\s[—–]\s|\s[—–]|[—–]\s'
+extends: existence
+message: Use 'July 31, 2016' format, not '%s'.
+link: https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/term-collections/date-time-terms
+ignorecase: true
+level: error
+nonword: true
+tokens:
+  - '\d{1,2} (?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)|May|Jun(?:e)|Jul(?:y)|Aug(?:ust)|Sep(?:tember)?|Oct(?:ober)|Nov(?:ember)?|Dec(?:ember)?) \d{4}'
+extends: existence
+message: "Don't use ordinal numbers for dates."
+link: https://docs.microsoft.com/en-us/style-guide/numbers#numbers-in-dates
+level: error
+nonword: true
+ignorecase: true
+raw:
+  - \b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)|May|Jun(?:e)|Jul(?:y)|Aug(?:ust)|Sep(?:tember)?|Oct(?:ober)|Nov(?:ember)?|Dec(?:ember)?)\b\s*
+tokens:
+  - first
+  - second
+  - third
+  - fourth
+  - fifth
+  - sixth
+  - seventh
+  - eighth
+  - ninth
+  - tenth
+  - eleventh
+  - twelfth
+  - thirteenth
+  - fourteenth
+  - fifteenth
+  - sixteenth
+  - seventeenth
+  - eighteenth
+  - nineteenth
+  - twentieth
+  - twenty-first
+  - twenty-second
+  - twenty-third
+  - twenty-fourth
+  - twenty-fifth
+  - twenty-sixth
+  - twenty-seventh
+  - twenty-eighth
+  - twenty-ninth
+  - thirtieth
+  - thirty-first
+extends: existence
+message: "Always spell out the name of the month."
+link: https://docs.microsoft.com/en-us/style-guide/numbers#numbers-in-dates
+ignorecase: true
+level: error
+nonword: true
+tokens:
+  - '\b\d{1,2}/\d{1,2}/(?:\d{4}|\d{2})\b'
+extends: existence
+message: "In general, don't use an ellipsis."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/ellipses
+nonword: true
+level: warning
+action:
+  name: remove
+tokens:
+  - '\.\.\.'
+extends: existence
+message: "Use first person (such as '%s') sparingly."
+link: https://docs.microsoft.com/en-us/style-guide/grammar/person
+ignorecase: true
+level: warning
+nonword: true
+tokens:
+  - (?:^|\s)I(?=\s)
+  - (?:^|\s)I(?=,\s)
+  - \bI'd\b
+  - \bI'll\b
+  - \bI'm\b
+  - \bI've\b
+  - \bme\b
+  - \bmy\b
+  - \bmine\b
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/word-choice/use-us-spelling-avoid-non-english-words
+ignorecase: true
+level: error
+nonword: true
+action:
+  name: replace
+swap:
+  '\b(?:eg|e\.g\.)[\s,]': for example
+  '\b(?:ie|i\.e\.)[\s,]': that is
+  '\b(?:viz\.)[\s,]': namely
+  '\b(?:ergo)[\s,]': therefore
+extends: substitution
+message: "Consider using '%s' instead of '%s'."
+ignorecase: true
+level: error
+action:
+  name: replace
+swap:
+  (?:alumna|alumnus): graduate
+  (?:alumnae|alumni): graduates
+  air(?:m[ae]n|wom[ae]n): pilot(s)
+  anchor(?:m[ae]n|wom[ae]n): anchor(s)
+  authoress: author
+  camera(?:m[ae]n|wom[ae]n): camera operator(s)
+  door(?:m[ae]|wom[ae]n): concierge(s)
+  draft(?:m[ae]n|wom[ae]n): drafter(s)
+  fire(?:m[ae]n|wom[ae]n): firefighter(s)
+  fisher(?:m[ae]n|wom[ae]n): fisher(s)
+  fresh(?:m[ae]n|wom[ae]n): first-year student(s)
+  garbage(?:m[ae]n|wom[ae]n): waste collector(s)
+  lady lawyer: lawyer
+  ladylike: courteous
+  mail(?:m[ae]n|wom[ae]n): mail carriers
+  man and wife: husband and wife
+  man enough: strong enough
+  mankind: human kind
+  manmade: manufactured
+  manpower: personnel
+  middle(?:m[ae]n|wom[ae]n): intermediary
+  news(?:m[ae]n|wom[ae]n): journalist(s)
+  ombuds(?:man|woman): ombuds
+  oneupmanship: upstaging
+  poetess: poet
+  police(?:m[ae]n|wom[ae]n): police officer(s)
+  repair(?:m[ae]n|wom[ae]n): technician(s)
+  sales(?:m[ae]n|wom[ae]n): salesperson or sales people
+  service(?:m[ae]n|wom[ae]n): soldier(s)
+  steward(?:ess)?: flight attendant
+  tribes(?:m[ae]n|wom[ae]n): tribe member(s)
+  waitress: waiter
+  woman doctor: doctor
+  woman scientist[s]?: scientist(s)
+  work(?:m[ae]n|wom[ae]n): worker(s)
+extends: existence
+message: "Don't use '%s'."
+link: https://github.com/MicrosoftDocs/microsoft-style-guide/blob/master/styleguide/grammar/nouns-pronouns.md#pronouns-and-gender
+level: error
+ignorecase: true
+tokens:
+  - he/she
+  - s/he
+extends: existence
+message: "For a general audience, use 'address' rather than 'URL'."
+link: https://docs.microsoft.com/en-us/style-guide/urls-web-addresses
+level: warning
+action:
+  name: replace
+  params:
+    - URL
+    - address
+tokens:
+  - URL
+dangling-and-misplaced-modifiers: false
+
+# If you’re not sure whether a term is a proper noun (and thus capitalized) or
+# a common noun (lowercase), check The American Heritage Dictionary and the A–Z
+# word list. Default to lowercase unless there's a compelling reason to
+# capitalize the term.
+capitalization-and-proper-nouns: false
+
+# To check the spelling of plural forms of words derived from Latin and Greek
+# that retain their Latin or Greek endings (typically -a, -us, -um, -on, -ix,
+# or -ex), see specific entries in the A–Z word list and The American Heritage
+# Dictionary.
+plural-nouns: false
+
+# Gender.yml, Vocab.yml
+pronouns-and-gender: True
+
+noun-and-pronoun-agreement: false
+words-ending-in-ing: false
+
+# FirstPerson.yml
+use-first-person-sparingly: true
+# We.yml
+avoid-first-person-plural: true
+
+prepositional-phrases: false
+
+# Passive.yml
+active-and-passive-voice: true
+
+verb-agreement: false
+extends: existence
+message: "Avoid using acronyms in a title or heading."
+link: https://docs.microsoft.com/en-us/style-guide/acronyms#be-careful-with-acronyms-in-titles-and-headings
+level: warning
+scope: heading
+tokens:
+  - '[A-Z]{2,4}'
+extends: existence
+message: "Capitalize '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/colons
+nonword: true
+level: error
+scope: heading
+tokens:
+  - ':\s[a-z]'
+extends: existence
+message: "Don't use end punctuation in headings."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/periods
+nonword: true
+level: warning
+scope: heading
+action:
+  name: edit
+  params:
+    - trim_right
+    - ".?!"
+tokens:
+  - "[a-z][.?!]$"
+extends: capitalization
+message: "'%s' should use sentence-style capitalization."
+link: https://docs.microsoft.com/en-us/style-guide/capitalization
+level: suggestion
+scope: heading
+match: $sentence
+indicators:
+  - ':'
+exceptions:
+  - Azure
+  - CLI
+  - Code
+  - Cosmos
+  - Docker
+  - Emmet
+  - I
+  - Kubernetes
+  - Linux
+  - macOS
+  - Marketplace
+  - MongoDB
+  - REPL
+  - Studio
+  - TypeScript
+  - URLs
+  - Visual
+  - VS
+  - Windows
+extends: existence
+message: "'%s' doesn't need a hyphen."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/dashes-hyphens/hyphens
+level: warning
+ignorecase: false
+nonword: true
+action:
+  name: edit
+  params:
+    - regex
+    - "-"
+    - " "
+tokens:
+  - '\b[^\s-]+ly-\w+\b'
+extends: existence
+message: "Form a negative number with an en dash, not a hyphen."
+link: https://docs.microsoft.com/en-us/style-guide/numbers
+nonword: true
+level: error
+action:
+  name: edit
+  params:
+    - regex
+    - "-"
+    - "–"
+tokens:
+  - '(?<=\s)-\d+(?:\.\d+)?\b'
+zero-through-nine: false
+
+# Percentages.yml
+percentages: true
+
+# Units.yml
+measurements: true
+
+commas-in-numbers: false
+
+# DateNumbers.yml, DateOrder.yml
+numbers-in-dates: true
+
+# Negative.yml
+negative-numbers: true
+
+# Ordinal.yml
+ordinal-numbers: true
+
+# Ranges.yml, RangeFormat.yml, RangeTime.yml
+ranges-of-numbers: true
+
+extends: existence
+message: "Don't add -ly to an ordinal number."
+link: https://docs.microsoft.com/en-us/style-guide/numbers
+level: error
+action:
+  name: edit
+  params:
+    - trim
+    - ly
+tokens:
+  - firstly
+  - secondly
+  - thirdly
+extends: existence
+message: "Use the Oxford comma in '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/commas
+scope: sentence
+level: suggestion
+nonword: true
+tokens:
+  - '(?:[^\s,]+,){1,} \w+ (?:and|or) \w+[.?!]'
+extends: existence
+message: "'%s' looks like passive voice."
+ignorecase: true
+level: suggestion
+raw:
+  - \b(am|are|were|being|is|been|was|be)\b\s*
+tokens:
+  - '[\w]+ed'
+  - awoken
+  - beat
+  - become
+  - been
+  - begun
+  - bent
+  - beset
+  - bet
+  - bid
+  - bidden
+  - bitten
+  - bled
+  - blown
+  - born
+  - bought
+  - bound
+  - bred
+  - broadcast
+  - broken
+  - brought
+  - built
+  - burnt
+  - burst
+  - cast
+  - caught
+  - chosen
+  - clung
+  - come
+  - cost
+  - crept
+  - cut
+  - dealt
+  - dived
+  - done
+  - drawn
+  - dreamt
+  - driven
+  - drunk
+  - dug
+  - eaten
+  - fallen
+  - fed
+  - felt
+  - fit
+  - fled
+  - flown
+  - flung
+  - forbidden
+  - foregone
+  - forgiven
+  - forgotten
+  - forsaken
+  - fought
+  - found
+  - frozen
+  - given
+  - gone
+  - gotten
+  - ground
+  - grown
+  - heard
+  - held
+  - hidden
+  - hit
+  - hung
+  - hurt
+  - kept
+  - knelt
+  - knit
+  - known
+  - laid
+  - lain
+  - leapt
+  - learnt
+  - led
+  - left
+  - lent
+  - let
+  - lighted
+  - lost
+  - made
+  - meant
+  - met
+  - misspelt
+  - mistaken
+  - mown
+  - overcome
+  - overdone
+  - overtaken
+  - overthrown
+  - paid
+  - pled
+  - proven
+  - put
+  - quit
+  - read
+  - rid
+  - ridden
+  - risen
+  - run
+  - rung
+  - said
+  - sat
+  - sawn
+  - seen
+  - sent
+  - set
+  - sewn
+  - shaken
+  - shaven
+  - shed
+  - shod
+  - shone
+  - shorn
+  - shot
+  - shown
+  - shrunk
+  - shut
+  - slain
+  - slept
+  - slid
+  - slit
+  - slung
+  - smitten
+  - sold
+  - sought
+  - sown
+  - sped
+  - spent
+  - spilt
+  - spit
+  - split
+  - spoken
+  - spread
+  - sprung
+  - spun
+  - stolen
+  - stood
+  - stridden
+  - striven
+  - struck
+  - strung
+  - stuck
+  - stung
+  - stunk
+  - sung
+  - sunk
+  - swept
+  - swollen
+  - sworn
+  - swum
+  - swung
+  - taken
+  - taught
+  - thought
+  - thrived
+  - thrown
+  - thrust
+  - told
+  - torn
+  - trodden
+  - understood
+  - upheld
+  - upset
+  - wed
+  - wept
+  - withheld
+  - withstood
+  - woken
+  - won
+  - worn
+  - wound
+  - woven
+  - written
+  - wrung
+extends: existence
+message: "Use a numeral plus the units."
+link: https://docs.microsoft.com/en-us/style-guide/numbers
+nonword: true
+level: error
+tokens:
+  - '\b[a-zA-z]+\spercent\b'
+extends: existence
+message: "Don't add '%s' to a singular noun. Use plural instead."
+ignorecase: true
+level: error
+link: https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/s/s-es
+raw:
+  - '\(s\)|\(es\)'
+extends: existence
+message: 'Punctuation should be inside the quotes.'
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/quotation-marks
+level: error
+nonword: true
+tokens:
+  - '["“][^"”“]+["”][.,]'
+extends: existence
+message: "Use 'to' instead of a dash in '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/numbers
+nonword: true
+level: error
+action:
+  name: edit
+  params:
+    - regex
+    - "[-–]"
+    - "to"
+tokens:
+  - '\b(?:AM|PM)\s?[-–]\s?.+(?:AM|PM)\b'
+extends: existence
+message: "Try to simplify this sentence."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/semicolons
+nonword: true
+scope: sentence
+level: suggestion
+tokens:
+  - ';'
+extends: occurrence
+message: "Try to keep sentences short (< 30 words)."
+scope: sentence
+level: suggestion
+max: 30
+token: \b(\w+)\b
+
+extends: existence
+message: "'%s' should have one space."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/periods
+level: error
+nonword: true
+tokens:
+  - '[a-z][.?!] {2,}[A-Z]'
+  - '[a-z][.?!][A-Z]'
+extends: existence
+message: "Don't use '%s' unless space is limited."
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/dashes-hyphens/hyphens
+ignorecase: true
+level: warning
+tokens:
+  - '\w+- and \w+-'
+extends: substitution
+message: "Prefer '%s' over '%s'."
+# term preference should be based on microsoft style guide, such as
+link: https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/adapter
+level: warning
+ignorecase: true
+action:
+  name: replace
+swap:
+  "(?:agent|virtual assistant|intelligent personal assistant)": personal digital assistant
+  "(?:assembler|machine language)": assembly language
+  "(?:drive C:|drive C>|C: drive)": drive C
+  "(?:internet bot|web robot)s?": bot(s)
+  "(?:microsoft cloud|the cloud)": cloud
+  "(?:mobile|smart) ?phone": phone
+  "24/7": every day
+  "audio(?:-| )book": audiobook
+  "back(?:-| )light": backlight
+  "chat ?bots?": chatbot(s)
+  adaptor: adapter
+  administrate: administer
+  afterwards: afterward
+  alphabetic: alphabetical
+  alphanumerical: alphanumeric
+  an URL: a URL
+  anti-aliasing: antialiasing
+  anti-malware: antimalware
+  anti-spyware: antispyware
+  anti-virus: antivirus
+  appendixes: appendices
+  artificial intelligence: AI
+  caap: CaaP
+  conversation-as-a-platform: conversation as a platform
+  eb: EB
+  gb: GB
+  gbps: Gbps
+  kb: KB
+  keypress: keystroke
+  mb: MB
+  pb: PB
+  tb: TB
+  zb: ZB
+extends: existence
+message: "Don't spell out the number in '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/term-collections/units-of-measure-terms
+level: error
+raw:
+  - '[a-zA-Z]+\s'
+tokens:
+  - '(?:centi|milli)?meters'
+  - '(?:kilo)?grams'
+  - '(?:kilo)?meters'
+  - '(?:mega)?pixels'
+  - cm
+  - inches
+  - lb
+  - miles
+  - pounds
+extends: substitution
+message: Use 'of' (not 'for') to describe the relationship of the word URL to a resource.
+ignorecase: true
+link: https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/u/url
+level: suggestion
+action:
+  name: replace
+swap:
+  URL for: URL of
+# AnURL.yml
+general-audience: true
+
+# URLFormat.yml
+a-an: true
+of-for: true
+extends: existence
+message: "Verify your use of '%s' with the A-Z word list."
+link: 'https://docs.microsoft.com/en-us/style-guide'
+level: suggestion
+ignorecase: true
+tokens:
+  - above
+  - accessible
+  - actionable
+  - against
+  - alarm
+  - alert
+  - alias
+  - allows?
+  - and/or
+  - as well as
+  - assure
+  - author
+  - avg
+  - beta
+  - ensure
+  - he
+  - insure
+  - sample
+  - she
+extends: existence
+message: "Try to avoid using first-person plural like '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/grammar/person#avoid-first-person-plural
+level: warning
+ignorecase: true
+tokens:
+  - we
+  - we'(?:ve|re)
+  - ours?
+  - us
+  - let's
+extends: substitution
+message: "Consider using '%s' instead of '%s'."
+link: https://docs.microsoft.com/en-us/style-guide/word-choice/use-simple-words-concise-sentences
+ignorecase: true
+level: suggestion
+action:
+  name: replace
+swap:
+  "sufficient number(?: of)?": enough
+  (?:extract|take away|eliminate): remove
+  (?:in order to|as a means to): to
+  (?:inform|let me know): tell
+  (?:previous|prior) to: before
+  (?:utilize|make use of): use
+  a (?:large)? majority of: most
+  a (?:large)? number of: many
+  a myriad of: myriad
+  adversely impact: hurt
+  all across: across
+  all of a sudden: suddenly
+  all of these: these
+  all of(?! a sudden| these): all
+  all-time record: record
+  almost all: most
+  almost never: seldom
+  along the lines of: similar to
+  an adequate number of: enough
+  an appreciable number of: many
+  an estimated: about
+  any and all: all
+  are in agreement: agree
+  as a matter of fact: in fact
+  as a means of: to
+  as a result of: because of
+  as of yet: yet
+  as per: per
+  at a later date: later
+  at all times: always
+  at the present time: now
+  at this point in time: at this point
+  based in large part on: based on
+  based on the fact that: because
+  basic necessity: necessity
+  because of the fact that: because
+  came to a realization: realized
+  came to an abrupt end: ended abruptly
+  carry out an evaluation of: evaluate
+  close down: close
+  closed down: closed
+  complete stranger: stranger
+  completely separate: separate
+  concerning the matter of: regarding
+  conduct a review of: review
+  conduct an investigation: investigate
+  conduct experiments: experiment
+  continue on: continue
+  despite the fact that: although
+  disappear from sight: disappear
+  doomed to fail: doomed
+  drag and drop: drag
+  drag-and-drop: drag
+  due to the fact that: because
+  during the period of: during
+  during the time that: while
+  emergency situation: emergency
+  establish connectivity: connect
+  except when: unless
+  excessive number: too many
+  extend an invitation: invite
+  fall down: fall
+  fell down: fell
+  for the duration of: during
+  gather together: gather
+  has the ability to: can
+  has the capacity to: can
+  has the opportunity to: could
+  hold a meeting: meet
+  if this is not the case: if not
+  in a careful manner: carefully
+  in a thoughtful manner: thoughtfully
+  in a timely manner: timely
+  in addition: also
+  in an effort to: to
+  in between: between
+  in lieu of: instead of
+  in many cases: often
+  in most cases: usually
+  in order to: to
+  in some cases: sometimes
+  in spite of the fact that: although
+  in spite of: despite
+  in the (?:very)? near future: soon
+  in the event that: if
+  in the neighborhood of: roughly
+  in the vicinity of: close to
+  it would appear that: apparently
+  lift up: lift
+  made reference to: referred to
+  make reference to: refer to
+  mix together: mix
+  none at all: none
+  not in a position to: unable
+  not possible: impossible
+  of major importance: important
+  perform an assessment of: assess
+  pertaining to: about
+  place an order: order
+  plays a key role in: is essential to
+  present time: now
+  readily apparent: apparent
+  some of the: some
+  span across: span
+  subsequent to: after
+  successfully complete: complete
+  take action: act
+  take into account: consider
+  the question as to whether: whether
+  there is no doubt but that: doubtless
+  this day and age: this age
+  this is a subject that: this subject
+  time (?:frame|period): time
+  under the provisions of: under
+  until such time as: until
+  used for fuel purposes: used for fuel
+  whether or not: whether
+  with regard to: regarding
+  with the exception of: except for

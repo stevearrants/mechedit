@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -10,6 +11,8 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import fs from 'fs/promises';
+import path from 'path';
 
 const CheckDocumentInputSchema = z.object({
   documentContent: z
@@ -17,7 +20,7 @@ const CheckDocumentInputSchema = z.object({
     .describe('The content of the document to be checked.'),
   valeRules: z
     .string()
-    .describe('Custom Vale rules to be applied during the check.'),
+    .describe('Custom Vale rules to be applied during the check. If empty, default rules will be used.'),
 });
 export type CheckDocumentInput = z.infer<typeof CheckDocumentInputSchema>;
 
@@ -53,10 +56,10 @@ Your task is to correct any grammar and spelling errors in the document, while a
 Return the corrected document, along with a list of any errors found, including the error message, line number, character start and end positions, and the ID of the Vale rule that triggered the error.
 
 Document Content:
-{{documentContent}}
+{{{documentContent}}}
 
 Vale Rules:
-{{valeRules}}`,
+{{{valeRules}}}`,
 });
 
 const checkDocumentFlow = ai.defineFlow(
@@ -65,8 +68,27 @@ const checkDocumentFlow = ai.defineFlow(
     inputSchema: CheckDocumentInputSchema,
     outputSchema: CheckDocumentOutputSchema,
   },
-  async input => {
-    const {output} = await checkDocumentPrompt(input);
+  async (input: CheckDocumentInput) => {
+    let effectiveValeRules = input.valeRules;
+
+    if (!effectiveValeRules || effectiveValeRules.trim() === "") {
+      try {
+        // Attempt to resolve the path relative to the current working directory.
+        // This assumes the flow is run from the project root.
+        const defaultRulesPath = path.join(process.cwd(), 'src', 'ai', 'rules', 'default-vale-rules.yml');
+        effectiveValeRules = await fs.readFile(defaultRulesPath, 'utf-8');
+      } catch (error) {
+        console.error("Error reading default Vale rules from src/ai/rules/default-vale-rules.yml:", error);
+        // Proceed with empty rules if default file reading fails.
+        // The prompt will receive an empty string for valeRules.
+        effectiveValeRules = ""; 
+      }
+    }
+
+    const {output} = await checkDocumentPrompt({
+      documentContent: input.documentContent,
+      valeRules: effectiveValeRules,
+    });
     return output!;
   }
 );
